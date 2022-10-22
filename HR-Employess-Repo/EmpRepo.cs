@@ -41,7 +41,6 @@ namespace HR_Employess_Repo
 
         public async Task<ICollection<Employee>> GetManagerListAsync()
         {
-            //only select name and if
             return await _context.Employees.Where(e => e.IsManager == true).ToListAsync();
         }
 
